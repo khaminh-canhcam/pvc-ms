@@ -1,10 +1,10 @@
 section.swiper-slide.bg-light
-  div(class='xl:rem:px-[160px] h-screen items-center flex flex-col xl:justify-end justify-center px-4 pt-16')
+  div(class='xl:rem:px-[160px] h-screen items-center flex flex-col md:gap-10 gap-5 lg:justify-end justify-center px-4 pt-16')
     .flex.gap-3.text-center.flex-col
       h1.title-h1(class=' text-[#41924F]') LĨNH VỰC HOẠT ĐỘNG
-      p Xí nghiệp cung cấp đa dạng các dịch vụ logistic và cảng biển, từ lưu trữ, vận tải đến xếp dỡ và bảo dưỡng thiết bị
+      p.line-clamp-2 Xí nghiệp cung cấp đa dạng các dịch vụ logistic và cảng biển, từ lưu trữ, vận tải đến xếp dỡ và bảo dưỡng thiết bị
     div(class='relative w-full')
-      div(class=' flex flex-col gap-5 md:py-20 py-0 swiper scrollswiper-1')
+      div(class='swiper scrollswiper-1')
         .swiper-wrapper
           +card("./img/1.jpg", "Dịch vụ Bốc xếp", "Cung cấp các giải pháp bốc xếp hàng hóa chuyên nghiệp, an toàn và hiệu quả.")
           +card("./img/1.jpg", "Dịch vụ Bốc xếp", "Cung cấp các giải pháp bốc xếp hàng hóa chuyên nghiệp, an toàn và hiệu quả.")
@@ -16,7 +16,6 @@ section.swiper-slide.bg-light
           +card("./img/1.jpg", "Dịch vụ Bốc xếp", "Cung cấp các giải pháp bốc xếp hàng hóa chuyên nghiệp, an toàn và hiệu quả.")
           +card("./img/1.jpg", "Dịch vụ Bốc xếp", "Cung cấp các giải pháp bốc xếp hàng hóa chuyên nghiệp, an toàn và hiệu quả.")
           +card("./img/1.jpg", "Dịch vụ Bốc xếp", "Cung cấp các giải pháp bốc xếp hàng hóa chuyên nghiệp, an toàn và hiệu quả.")
-
       .btn-prev.btn-change
         img(src="/img/chevo-right.svg" alt="" class='w-5 h-5 rotate-180')
       .btn-next.btn-change

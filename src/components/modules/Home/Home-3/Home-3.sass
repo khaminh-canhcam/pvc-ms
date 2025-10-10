@@ -6,7 +6,7 @@
 .title-p
   @apply text-base leading-5 opacity-60 
 .btn-change
-  @apply absolute cursor-pointer xl:bottom-1/2 md:-bottom-10 -bottom-17 translate-y-full bg-[#2B378D] border border-[#9FA1A3] p-2
+  @apply absolute cursor-pointer xl:bottom-1/2 md:-bottom-10 -bottom-3 translate-y-full bg-[#2B378D] border border-[#9FA1A3] p-2
 .btn-prev
   @apply xl:-left-0 left-1/2 rem:-translate-x-[50px]
 .btn-next
@@ -44,9 +44,7 @@
 .swiper-slide
   @apply overflow-visible
   .card-item
-    @apply relative rounded-lg shadow-xl overflow-hidden mx-auto
-    width: 350px
-    height: 500px
+    @apply relative rounded-lg shadow-xl overflow-hidden mx-auto md:rem:h-[500px] rem:h-[400px] w-full
     max-width: 100%
     .card-item-image
       @apply w-full h-full
