@@ -104,7 +104,7 @@ export function swiperInit() {
       },
       1200: {
         slidesPerView: 4,
-        spaceBetween: 24,
+        spaceBetween: 20,
       },
     },
     modules: [Navigation, Pagination, Autoplay],

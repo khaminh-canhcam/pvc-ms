@@ -6,17 +6,16 @@
 .title-p
   @apply text-base leading-5 opacity-60 
 .btn-change
-  @apply absolute cursor-pointer xl:bottom-1/2 md:-bottom-10 -bottom-17 -translate-y-1/2 bg-[#2B378D] border border-[#9FA1A3] p-2
+  @apply absolute cursor-pointer xl:bottom-1/2 md:-bottom-10 -bottom-17 translate-y-full bg-[#2B378D] border border-[#9FA1A3] p-2
 .btn-prev
-  @apply xl:-left-10 left-1/2 rem:-translate-x-[50px]
+  @apply xl:-left-0 left-1/2 rem:-translate-x-[50px]
 .btn-next
-  @apply xl:-right-10 right-1/2 rem:translate-x-[50px]
+  @apply xl:-right-0 right-1/2 rem:translate-x-[50px]
 .bg-item
   position: relative
   background: linear-gradient(to top, #0C5919, #41924F)
   border-radius: 24px
   overflow: hidden
-  // phần khe trắng khi hover
   &::after
     content: ''
     position: absolute
@@ -40,3 +39,33 @@
     opacity: 0
   100%
     opacity: 1
+
+
+.swiper-slide
+  @apply overflow-visible
+  .card-item
+    @apply relative rounded-lg shadow-xl overflow-hidden mx-auto
+    width: 350px
+    height: 500px
+    max-width: 100%
+    .card-item-image
+      @apply w-full h-full
+      @apply flex justify-center items-center
+      transition: height 0.5s ease, margin-top 0.5s ease
+      img
+        @apply w-full h-full object-cover
+        transition: width 0.5s ease 0.1s, border-radius 0.5s ease 0.1s
+    .card-item-content
+      @apply w-full p-6 text-center
+      height: 40%
+    &:hover
+      .card-item-image
+        margin-top: 20px
+        height: calc(60% - 50px)
+        img
+          width: 92%
+          @apply rounded-lg
+    .card-item-title
+      @apply text-2xl font-bold text-white
+    .card-item-info
+      @apply text-gray-300 mt-2 text-lg
