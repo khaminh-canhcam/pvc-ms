@@ -1,23 +1,36 @@
 section.swiper-slide.bg-dark
   .section-projects.h-full
-    div(class='flex h-full overflow-hidden')
-      - const projects = [{ img: "/img/item-section-3-1.jpg", title: "Dự án Chân đế JA&KA Gallaf 3" },{ img: "/img/item-section-3-2.jpg", title: "Su Tử Trắng Living Quarter Module" },{ img: "/img/item-section-3-3.jpg", title: "Dai Hùng 01 Wellhead Platform Topside" },{ img: "/img/item-section-3-4.jpg", title: "Lạc Đà Vàng Jacket – Lot LDV-A" }]
-            each project, i in projects
-              //- Mỗi item co giãn được
-              div(class="relative flex-1 overflow-hidden cursor-pointer transition-all duration-500 ease-in-out group/item hover:flex-[2]")
-                //- Ảnh nền
-                img(
-                  src=project.img
-                  alt=project.title
-                  class="absolute inset-0 w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:brightness-75 group-hover/item:brightness-100"
-                )
-                //- Overlay gradient
-                div(class="absolute inset-0 bg-gradient-to-t from-[#0C5919]/70 to-transparent transition-all duration-500")
-                //- Text
-                div(class="absolute bottom-5 left-0 w-full px-6 text-white translate-y-3 transition-all duration-500 group-hover/item:translate-y-0 z-10")
-                  h3(class="rem:text-[18px] font-semibold leading-tight line-clamp-1")= project.title
-    div(class='absolute rem:top-[30%] rem:left-[10%] flex flex-col gap-12 items-start ')
-      h1.title-h1.text-white CÔNG TRÌNH <br/> DỰ ÁN TIÊU BIỂU
-      a(href='/' class='text-white bg-[#2B378D] px-6 py-3 border-2 border-white flex items-center gap-2')
-        | XEM THÊM
-        img(src="/img/chevo-right.svg", alt="")
+    - const projects = [{ img: "/img/item-section-3-1.jpg", title: "Dự án Chân đế JA&KA Gallaf 3" },{ img: "/img/item-section-3-2.jpg", title: "Su Tử Trắng Living Quarter Module" },{ img: "/img/item-section-3-3.jpg", title: "Dai Hùng 01 Wellhead Platform Topside" },{ img: "/img/item-section-3-4.jpg", title: "Lạc Đà Vàng Jacket – Lot LDV-A" }]
+      div(class='lg:flex hidden h-full overflow-hidden')
+        each project, i in projects
+          div(class="relative flex-1 bg-item-project overflow-hidden cursor-pointer transition-all duration-500 ease-in-out group/item hover:flex-[2]")
+            img(
+              src=project.img
+              alt=project.title
+              class="absolute inset-0 w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:brightness-75 group-hover/item:brightness-100"
+            )
+            div(class="absolute bottom-5 left-0 w-full px-6 text-white translate-y-3 transition-all duration-500 group-hover/item:translate-y-0 z-10")
+              h3(class="rem:text-[18px] font-semibold leading-tight line-clamp-1")= project.title
+        div(class='absolute rem:top-[30%] rem:left-[10%] flex flex-col gap-12 items-start ')
+          h1.title-h1.text-white CÔNG TRÌNH <br/> DỰ ÁN TIÊU BIỂU
+          +BtnPrimary()
+      div(class='lg:hidden flex flex-col md:justify-evenly justify-center relative gap-10 bg-[url(/img/bg-section-4.png)] h-full items-center')
+        h1(class='title-h1 text-[#41924F]') CÔNG TRÌNH DỰ ÁN TIÊU BIỂU
+        div(class='relative swiper project-swiper w-full group')
+          .swiper-wrapper.px-3
+            each item in projects   
+              div(class='swiper-slide')
+                div(class='bg-item-project h-full')
+                  img( 
+                    src=item.img
+                    alt=item.title
+                    class='w-full rem:h-[300px] object-cover lozad')
+                div(class='absolute bottom-0 w-full text-white z-10 text-center line-clamp-2')
+                  h3(class='')= item.title
+        .swiper-pagination
+        +BtnPrimary()
+        div(class='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-5 bg-slate-950/50 px-6 py-3 rounded-full z-20 opacity-100 duration-500 transition-all group-hover:opacity-0') 
+          img(src="/img/chevo-right.svg", alt="" class='lozad rotate-180')
+          div(class='text-white flex-1 animate-move')
+            <i class="fa-light fa-hand-point-up"></i>
+          img(src="/img/chevo-right.svg", alt="" class='lozad')

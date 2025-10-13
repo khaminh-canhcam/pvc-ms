@@ -1,6 +1,10 @@
 @import 'src/components/_core/_mixins'
 @import 'plugins/Wordpress/form'
 
+body
+	font-family: 'Exo 2', sans-serif
+
+
 .edit-link i:before
 	content: '✏️'
 
@@ -22,8 +26,7 @@
 .vertical-swiper .swiper-slide,
 .pagination-swiper .swiper-slide
 	min-height: 0 // tránh 0 height
-.swiper-pagination
-	@apply gap-1 flex flex-col items-center
+.swiper-pagination-vertical
 	position: absolute
 	top: 50%
 	right: 40px
@@ -62,7 +65,7 @@
 		border: 0
 		opacity: 1
 	.title-pagination
-		@apply rem:w-[150px] text-center absolute -left-1/2 translate-x-0 p-3 -top-1/2	 bg-[#0C5919] text-white rounded-5 opacity-0 transition-all duration-300
+		@apply rem:w-[150px] text-center absolute -left-1/2 translate-x-0 p-3 -top-1/2 bg-primary-1 text-white rounded-5 opacity-0 transition-all duration-300
 	.circle.swiper-pagination-bullet-active
 		&::before
 			content: ""

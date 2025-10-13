@@ -2,13 +2,15 @@ header
 	@apply fixed top-0 left-0 w-screen
 	@apply text-black z-30 bg-white
 	font-family: 'Exo 2', sans-serif
-	.header-logo, .header-logo-mobile
-		@apply rem:w-[104px] rem:h-[104px]
+	.header-logo
 		a
 			img
 				@apply w-full h-full object-cover
 	.header-logo-mobile
-		@apply xl:hidden block
+		@apply xl:hidden block 
+		a
+			img
+				@apply rem:h-[70px]
 	.header-language
 		@apply flex items-center gap-2 text-[#41924F]
 		position: relative
@@ -30,8 +32,6 @@ header
 				@apply opacity-50
 			li.wpml-ls-current-language
 				@apply hidden  
-// .active
-// 	@apply bg-white text-black
 .header-menu
 	@apply flex justify-end gap-7 rem:leading-[25px] items-center content-stretch
 	.item-menu
@@ -43,9 +43,9 @@ header
 		@apply rem:py-[9px] 
 .header-menu-bottom
 	.item-nav-bar
-		@apply py-7 
-		a
-			@apply py-7
+		@apply py-6
+		.item-menu
+			@apply py-7 h-full
 .phone-number
 		@apply flex items-center gap-2
 		i

@@ -12,6 +12,7 @@ import {
 /**
  * @param swiperInit
  */
+
 export function swiperInit() {
   new Swiper(".pagination-swiper", {
     slidesPerView: 1,
@@ -19,9 +20,9 @@ export function swiperInit() {
     speed: 1000,
     loop: true,
     effect: "fade",
-    autoplay: {
-      delay: 3500,
-    },
+    // autoplay: {
+    //   delay: 3500,
+    // },
     modules: [Pagination, Navigation, Autoplay, EffectFade],
     pagination: {
       el: ".swiper-pagination-home-1",
@@ -34,7 +35,11 @@ export function swiperInit() {
           "Phát triển bền vững",
         ];
         return (
-          '<p class=" col-span-1 text-white !bg-transparent border-white cursor-pointer w-full ' + className +' ">' +item_p[index % item_p.length] +"</p>"
+          '<p class=" col-span-1 text-white !bg-transparent border-white cursor-pointer w-full line-clamp-2 ' +
+          className +
+          ' ">' +
+          item_p[index % item_p.length] +
+          "</p>"
         );
       },
     },
@@ -43,20 +48,22 @@ export function swiperInit() {
   new Swiper(".vertical-swiper", {
     direction: "vertical",
     slidesPerView: 1,
-    mousewheel: true,
+    // mousewheel: true,
     modules: [Pagination, Mousewheel],
     pagination: {
-      el: ".swiper-pagination",
+      el: ".swiper-pagination-vertical",
       clickable: true,
       renderBullet: function (index, className) {
         const title = [
-          'banner',
-          'gioi thieu',
-          'linh vu hoat dong',
-          'du an tieu bieu',
-          'tin tuc'
-        ]
-        return `<p class="circle ${className}"><span class="title-pagination">${title[index % title.length]}</span></p>`;
+          "banner",
+          "gioi thieu",
+          "linh vu hoat dong",
+          "du an tieu bieu",
+          "tin tuc",
+        ];
+        return `<p class="circle ${className}"><span class="title-pagination">${
+          title[index % title.length]
+        }</span></p>`;
       },
     },
     on: {
@@ -79,7 +86,7 @@ export function swiperInit() {
   });
 
   new Swiper(".scrollswiper-1", {
-    slidesPerView: 1,
+    slidesPerView: 2,
     spaceBetween: 24,
     autoplay: {
       delay: 3000,
@@ -108,4 +115,19 @@ export function swiperInit() {
     },
     modules: [Navigation, Pagination, Autoplay],
   });
+
+  new Swiper(".project-swiper", {
+    slidesPerView: 2,
+    pagination:{
+      el:'.swiper-pagination',
+      clickable:true
+    },
+    loop:true,
+    breakpoints: {
+      1024: {
+        slidesPerView: 4, // không cần, vì phần này ẩn bằng CSS
+      },
+    },
+    modules:[Pagination]
+  });  
 }

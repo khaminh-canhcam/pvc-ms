@@ -5,7 +5,7 @@ block var
 	- var bodyClass = ''
 
 block main
-	.swiper.vertical-swiper.max-h-screen.overflow-hidden
+	.swiper.vertical-swiper(class='max-h-screen overflow-hidden')
 		.swiper-wrapper
 			include ../components/modules/Home/Home-1/Home-1
 			include ../components/modules/Home/Home-2/Home-2
@@ -13,4 +13,4 @@ block main
 			include ../components/modules/Home/Home-4/Home-4
 			include ../components/modules/Home/Home-5/Home-5
 			include ../components/modules/Home/Home-6/Home-6
-		.swiper-pagination
+		.swiper-pagination-vertical(class='lg:flex hidden flex-col items-center')

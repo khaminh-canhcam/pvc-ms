@@ -233,7 +233,7 @@ module.exports = {
 			colors: {
 				transparent: "transparent",
 				"primary": {
-					"1": "#12545e",
+					"1": "#0C5919",
 					"2": "#e45c1e",
 					"3": "#232321"
 				},
