@@ -19,9 +19,9 @@ export function swiperInit() {
     speed: 1000,
     loop: true,
     effect: "fade",
-    // autoplay: {
-    //   delay: 3500,
-    // },
+    autoplay: {
+      delay: 3500,
+    },
     modules: [Pagination, Navigation, Autoplay, EffectFade],
     pagination: {
       el: ".swiper-pagination-home-1",
@@ -81,10 +81,9 @@ export function swiperInit() {
   new Swiper(".scrollswiper-1", {
     slidesPerView: 1,
     spaceBetween: 24,
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 3000,
+    },
     navigation: {
       nextEl: ".btn-next",
       prevEl: ".btn-prev",
