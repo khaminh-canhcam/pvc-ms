@@ -35,8 +35,32 @@ header
 .header-menu
 	@apply flex justify-end gap-7 rem:leading-[25px] items-center content-stretch
 	.item-menu
+		@apply relative
 		&:hover
-			@apply text-[#41924F] border-b-4 border-[#41924F] transition-all duration-200 
+			@apply text-[#41924F] transition-all duration-200
+		&::after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 50%
+			transform: translateX(-50%)
+			width: 0
+			height: 0
+			background: #41924F
+			border-top-left-radius: 8px
+			border-top-right-radius: 8px
+			z-index: 30
+			transition: all 0.2s ease-in-out
+		&:hover::after
+			@apply w-full h-1
+	.item-menu-active
+		@apply relative text-[#41924F]
+		&::after
+			@apply absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-1 bg-[#41924F] z-20
+			content:''
+			border-top-left-radius: 8px
+			border-top-right-radius: 8px
+			z-index: 30
 .header-menu-top
 	@apply border-b border-[#E5E5E5] rem:text-[18px] font-semibold
 	.link-header-top
@@ -48,20 +72,22 @@ header
 			@apply py-7 h-full
 .phone-number
 		@apply flex items-center gap-2
+		&:hover
+			@apply text-[#FB0200]
 		i
-			@apply text-[#FB0200] p-2 bg-white
-.header-search
-	@apply rem:p-[10px] text-[#41924F]
-.social-media
-	@apply flex justify-center
+			@apply text-[#FB0200] p-2 bg-gray-100 h-full
+.top-right-nav
+	@apply flex justify-center items-center
 	a
-		@apply text-white flex justify-center items-center rem:p-[10px]
+		@apply text-white flex justify-center h-full items-center p-3
 		&:hover
 			@apply bg-[#FB0200] transition-all duration-200
+	.header-search
+		@apply  text-[#41924F] bg-gray-100 p-3 cursor-pointer
 	.social-facebook
-		@apply rem:p-[10px] bg-[#1067E5]
+		@apply bg-[#1067E5] px-4
 	.social-youtube
-		@apply rem:p-[10px] bg-[#FF0000]
+		@apply bg-[#FF0000]
 .header-nav-desktop
 	@apply hidden xl:flex items-center justify-between
 

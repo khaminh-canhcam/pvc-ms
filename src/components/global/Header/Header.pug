@@ -17,17 +17,16 @@ header
           div(class='flex gap-3')
             .header-language
               +HeaderLanguage()
-            .flex
+            div(class='flex justify-center items-center top-right-nav')
               .header-search
                 <i class="fa-regular fa-magnifying-glass"></i>
-              .social-media
-                a.social-facebook.flex.justify-center.items-center(href="") 
-                  <i class="fa-brands fa-facebook-f w-5 h-5"></i> 
-                a.social-youtube(href="") 
-                  <i class="fa-brands fa-youtube"></i>
+              a.social-facebook(href="") 
+                <i class="fa-brands fa-facebook-f"></i> 
+              a.social-youtube(href="") 
+                <i class="fa-brands fa-youtube"></i>
         ul(class='header-menu header-menu-bottom gap-8 font-bold rem:text-[20px] leading-7')
           li.item-nav-bar
-            a.item-menu(href='#') 
+            a.item-menu.item-menu-active(href='#') 
               <i class="fa-regular fa-house"></i>
           li.item-nav-bar
             a.item-menu(href='#') Giới thiệu
