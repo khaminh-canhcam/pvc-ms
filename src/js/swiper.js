@@ -86,7 +86,7 @@ export function swiperInit() {
   });
 
   new Swiper(".scrollswiper-1", {
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 24,
     autoplay: {
       delay: 3000,
