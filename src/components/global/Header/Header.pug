@@ -1,7 +1,7 @@
 header
   nav.relative
     .header-nav-desktop(class='xl:rem:px-[160px] px-[16px]')
-    
+
       .header-logo
         a(href='/')
           img(src='./img/logo.svg' class='lozad' alt='Logo' )
@@ -24,7 +24,7 @@ header
                 <i class="fa-brands fa-facebook-f"></i> 
               a.social-youtube(href="") 
                 <i class="fa-brands fa-youtube"></i>
-        ul(class='header-menu header-menu-bottom gap-8 font-bold rem:text-[20px] leading-7')
+        ul(class='header-menu header-menu-bottom gap-[30px] font-bold rem:text-[20px] leading-7')
           li.item-nav-bar
             a.item-menu.item-menu-active(href='#') 
               <i class="fa-regular fa-house"></i>
@@ -48,11 +48,14 @@ header
       .header-logo-mobile
         a(href='/')
           img(src='./img/logo.svg' class='lozad' alt='Logo' )
-      .header-hambuger
-        .hamburger-icon
-          span
-          span
-          span
+      div(class='xl:hidden flex items-center gap-3')
+        .header-search
+          <i class="fa-regular fa-magnifying-glass"></i>
+        .header-hambuger
+          .hamburger-icon
+            span
+            span
+            span
       .header-menu-mobile
         ul
           li

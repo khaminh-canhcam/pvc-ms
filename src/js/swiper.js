@@ -48,7 +48,7 @@ export function swiperInit() {
   new Swiper(".vertical-swiper", {
     direction: "vertical",
     slidesPerView: 1,
-    // mousewheel: true,
+    allowTouchMove: true,
     modules: [Pagination, Mousewheel],
     pagination: {
       el: ".swiper-pagination-vertical",
@@ -83,14 +83,20 @@ export function swiperInit() {
         }
       },
     },
+    // breakpoints: {
+    //   768: {
+    //     allowTouchMove: false,
+    //     mousewheel: true,
+    //   },
+    // },
   });
 
   new Swiper(".scrollswiper-1", {
     slidesPerView: 1,
     spaceBetween: 24,
-    autoplay: {
-      delay: 3000,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    // },
     navigation: {
       nextEl: ".btn-next",
       prevEl: ".btn-prev",
@@ -118,16 +124,16 @@ export function swiperInit() {
 
   new Swiper(".project-swiper", {
     slidesPerView: 2,
-    pagination:{
-      el:'.swiper-pagination',
-      clickable:true
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
     },
-    loop:true,
+    loop: true,
     breakpoints: {
       1024: {
         slidesPerView: 4, // không cần, vì phần này ẩn bằng CSS
       },
     },
-    modules:[Pagination]
-  });  
+    modules: [Pagination],
+  });
 }

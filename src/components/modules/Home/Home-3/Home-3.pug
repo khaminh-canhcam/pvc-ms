@@ -1,9 +1,9 @@
 section.swiper-slide.bg-light
-  div(class='xl:rem:px-[160px] bg-[url(/img/bg-section-4.png)] bg-cover bg-no-repeat h-full items-center flex flex-col gap-10 lg:justify-center md:justify-evenly justify-center px-4')
+  div(class='xl:rem:px-[160px] bg-[url(/img/bg-section-4.png)] bg-cover bg-no-repeat h-full items-center flex flex-col gap-6 lg:justify-end md:justify-evenly justify-center px-4')
     .flex.gap-3.text-center.flex-col
       h1.title-h1(class=' text-[#41924F]') LĨNH VỰC HOẠT ĐỘNG
-      p.line-clamp-2 Xí nghiệp cung cấp đa dạng các dịch vụ logistic và cảng biển, từ lưu trữ, vận tải đến xếp dỡ và bảo dưỡng thiết bị
-    div(class='relative w-full')
+      p(class='line-clamp-2 clampRem:text-xl leadning-7') Xí nghiệp cung cấp đa dạng các dịch vụ logistic và cảng biển, từ lưu trữ, vận tải đến xếp dỡ và bảo dưỡng thiết bị
+    div(class='relative w-full pb-10 group')
       div(class='swiper scrollswiper-1')
         .swiper-wrapper
           +card("./img/1.jpg", "Dịch vụ Bốc xếp", "Cung cấp các giải pháp bốc xếp hàng hóa chuyên nghiệp, an toàn và hiệu quả.")
@@ -16,7 +16,12 @@ section.swiper-slide.bg-light
           +card("./img/1.jpg", "Dịch vụ Bốc xếp", "Cung cấp các giải pháp bốc xếp hàng hóa chuyên nghiệp, an toàn và hiệu quả.")
           +card("./img/1.jpg", "Dịch vụ Bốc xếp", "Cung cấp các giải pháp bốc xếp hàng hóa chuyên nghiệp, an toàn và hiệu quả.")
           +card("./img/1.jpg", "Dịch vụ Bốc xếp", "Cung cấp các giải pháp bốc xếp hàng hóa chuyên nghiệp, an toàn và hiệu quả.")
+      div(class='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-5 bg-slate-950/50 px-6 py-3 rounded-full z-20 lg:opacity-0 opacity-100 duration-200 transition-all group-hover:opacity-0') 
+        img(src="/img/chevo-right.svg" alt="" class='lozad rotate-180')
+        div(class='text-white flex-1 animate-move')
+          <i class="fa-light fa-hand-point-up"></i>
+        img(src="/img/chevo-right.svg" alt="" class='lozad')
       .btn-prev.btn-change
-        img(src="/img/chevo-right.svg" alt="" class='w-5 h-5 rotate-180')
+        <i class="fa-regular fa-chevron-left "></i>
       .btn-next.btn-change
-        img(src="/img/chevo-right.svg" alt="" class='w-5 h-5 ')
+        <i class="fa-regular fa-chevron-right"></i>
